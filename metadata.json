@@ -1,0 +1,6 @@
+{
+  "name": "Pasio Patisseries",
+  "description": "Handcrafted 100% eggless custom cakes, bento boxes, pastries, luxury hampers & B2B café supplies in Kurla West, Mumbai.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
