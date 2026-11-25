@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { LOGO_IMAGE_SRC } from '../data/menu';
+import { LOGO_IMAGE_SRC } from '../data/events';
 
 interface BrandBadgeProps {
   size?: 'sm' | 'md' | 'lg';
@@ -23,27 +23,27 @@ export function BrandBadge({
 
   return (
     <div className="inline-flex items-center gap-3.5 sm:gap-4">
-      {/* Circular Logo Slot — swap LOGO_IMAGE_SRC in src/data/menu.ts to replace the logo file */}
+      {/* Circular Crest Logo Slot — swap LOGO_IMAGE_SRC in src/data/events.ts */}
       <div
-        className={`${circleSizeClass} relative shrink-0 overflow-hidden rounded-full bg-[#B86F6F] ring-2 ${
-          inverted ? 'ring-[#FBECEB]/30' : 'ring-[#B86F6F]/25'
+        className={`${circleSizeClass} relative shrink-0 overflow-hidden rounded-full bg-[#FAF5EE] ring-2 ${
+          inverted ? 'ring-[#B87D56]/60' : 'ring-[#B87D56]/40'
         } shadow-sm flex items-center justify-center`}
       >
         {!imgError ? (
           <img
             src={LOGO_IMAGE_SRC}
-            alt="Pasio Patisseries — Baking Dreams Into Reality logo"
+            alt="The Grand Affair — Weddings & Events royal monogram logo"
             referrerPolicy="no-referrer"
             onError={() => setImgError(true)}
-            className="h-full w-full object-cover scale-[1.2] select-none"
+            className="h-full w-full object-cover object-[50%_58%] scale-[1.2] select-none"
           />
         ) : (
-          <div className="flex flex-col items-center justify-center text-center px-1.5 text-[#FBECEB]">
-            <span className="font-serif text-base sm:text-lg font-semibold leading-none tracking-tight">
-              Pasio
+          <div className="flex flex-col items-center justify-center text-center px-1.5 text-[#242B22]">
+            <span className="font-serif text-base sm:text-lg font-semibold leading-none tracking-tight text-[#B87D56]">
+              TGA
             </span>
-            <span className="text-[7px] uppercase tracking-[0.16em] mt-0.5 opacity-90">
-              Patisseries
+            <span className="text-[7px] uppercase tracking-[0.14em] mt-0.5 text-[#5C6B50]">
+              Events
             </span>
           </div>
         )}
@@ -53,17 +53,17 @@ export function BrandBadge({
         <div className="flex flex-col text-left">
           <span
             className={`font-serif text-lg sm:text-xl font-semibold tracking-tight leading-tight ${
-              inverted ? 'text-[#FBECEB]' : 'text-[#3D2424]'
+              inverted ? 'text-[#FAF5EE]' : 'text-[#242B22]'
             }`}
           >
-            Pasio Patisseries
+            The Grand Affair
           </span>
           <span
             className={`mt-0.5 text-[11px] font-semibold tracking-[0.18em] ${
-              inverted ? 'text-[#FBECEB]/80' : 'text-[#9B5656]'
+              inverted ? 'text-[#D7A987]' : 'text-[#5C6B50]'
             }`}
           >
-            BAKING DREAMS INTO REALITY
+            WEDDINGS &amp; EVENTS
           </span>
         </div>
       )}

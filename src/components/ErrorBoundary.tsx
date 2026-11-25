@@ -1,5 +1,5 @@
 import { Component, ErrorInfo, ReactNode } from 'react';
-import { buildGeneralWhatsAppUrl } from '../data/menu';
+import { buildGeneralWhatsAppUrl } from '../data/events';
 
 interface ErrorBoundaryProps {
   children: ReactNode;
@@ -23,18 +23,18 @@ export class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundarySt
   render() {
     if (this.state.hasError) {
       return (
-        <div className="min-h-screen flex items-center justify-center bg-[#FBECEB] px-6 py-16 text-center text-[#3D2424]">
-          <div className="max-w-md rounded-2xl border border-[#EAD5D3] bg-[#FFFDFC] p-8 shadow-sm">
-            <h1 className="font-serif text-2xl font-semibold">Pasio Patisseries</h1>
-            <p className="mt-3 text-sm leading-relaxed text-[#6B4747]">
-              Something went wrong while displaying the menu. Please refresh the page or place your
-              order directly on WhatsApp.
+        <div className="min-h-screen flex items-center justify-center bg-[#FAF5EE] px-6 py-16 text-center text-[#242B22]">
+          <div className="max-w-md rounded-2xl border border-[#E8DDD0] bg-[#FFFFFF] p-8 shadow-sm">
+            <h1 className="font-serif text-2xl font-semibold">The Grand Affair</h1>
+            <p className="mt-3 text-sm leading-relaxed text-[#525C4F]">
+              Something went wrong while displaying the page. Please reload or reach out to our
+              planning team directly on WhatsApp.
             </p>
             <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
               <button
                 type="button"
                 onClick={() => window.location.reload()}
-                className="min-h-[44px] w-full sm:w-auto rounded-full border border-[#DFC4C1] px-5 py-2.5 text-sm font-semibold text-[#3D2424] hover:border-[#B86F6F]"
+                className="min-h-[44px] w-full sm:w-auto rounded-full border border-[#DDD0C0] px-5 py-2.5 text-sm font-semibold text-[#242B22] hover:border-[#B87D56]"
               >
                 Reload Page
               </button>
@@ -42,9 +42,9 @@ export class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundarySt
                 href={buildGeneralWhatsAppUrl()}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex min-h-[44px] w-full sm:w-auto items-center justify-center rounded-full bg-[#B86F6F] px-5 py-2.5 text-sm font-semibold text-[#FFFDFC] hover:bg-[#9B5656]"
+                className="inline-flex min-h-[44px] w-full sm:w-auto items-center justify-center rounded-full bg-[#B87D56] px-5 py-2.5 text-sm font-semibold text-[#FFFFFF] hover:bg-[#9B6542]"
               >
-                Order on WhatsApp
+                Plan on WhatsApp
               </a>
             </div>
           </div>
